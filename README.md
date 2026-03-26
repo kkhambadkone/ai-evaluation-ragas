@@ -31,7 +31,7 @@ Let me know if you'd like more information!
 The output of each and explanation for evalution with Mistral  is provided below.
 
 <div align="center">
-  <img src="images/ragas_evalutation_mistral.png" width="500" height="500" />
+  <img src="images/ragas_evalutation_mistral.png" width="700" height="700" />
 </div>
 
 ### Output of evaluation with Mistral
