@@ -30,8 +30,8 @@ Let me know if you'd like more information!
 
 The output of each and explanation for evalution with Mistral  is provided below.
 
-<div class="image-container">
-  <img src="images/ragas_evalutation_mistral.png" width="400" height="400" />
+<div align="center">
+  <img src="images/ragas_evalutation_mistral.png" width="500" height="500" />
 </div>
 
 ### Output of evaluation with Mistral
