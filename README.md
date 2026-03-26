@@ -1,5 +1,7 @@
 # AI Evaluation with RAGAS 
 
+Environment for this: Ubuntu 22.04.4
+
 ## Install the following python packages
 
 pip install pymupdf4llm chromadb langchain-text-splitters sentence_transformers ollama ragas
