@@ -10,6 +10,10 @@ pip install pymupdf4llm chromadb langchain-text-splitters sentence_transformers 
 
 The script parsepdfembedtochromadb.py chunks the document KSM-01-26.pdf, creates embeddings and stores them in a chromadb vector database (chroma_db) to a collection called pdf_docs.  Chumk size is 500 chars with overlap of 50 chars.  This can be adjusted.
 
+1. First run parsepdfembedtochromadb.py to create the embeddings
+2. Then run queryevalutateragas.py to do the evaluation with RAGAS. 
+   The output is the image shown under the Result section below.
+
 ## Question and Answer
 
 ### Question
