@@ -6,6 +6,14 @@ Environment for this: Ubuntu 22.04.4
 
 pip install pymupdf4llm chromadb langchain-text-splitters sentence_transformers ollama ragas
 
+get the mistral LLM if you don't have it already,
+
+ollama pull mistral
+
+Run the ollama server
+
+nohup ollama serve > ollama.out 2>&1 &
+
 ## Workflow
 
 The script parsepdfembedtochromadb.py chunks the document KSM-01-26.pdf, creates embeddings and stores them in a chromadb vector database (chroma_db) to a collection called pdf_docs.  Chumk size is 500 chars with overlap of 50 chars.  This can be adjusted.
