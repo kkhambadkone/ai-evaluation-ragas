@@ -24,6 +24,8 @@ The script parsepdfembedtochromadb.py chunks the document KSM-01-26.pdf, creates
 
 ## Architecture
 
+```
+
                          ┌────────────────────┐
                          │     Evaluation     │
                          │     Dataset        │
@@ -46,6 +48,9 @@ The script parsepdfembedtochromadb.py chunks the document KSM-01-26.pdf, creates
       │                                                        Context Recall
       │                                                       (from evaluator)
       └──────────────────────────────────────────────────────────┘
+
+
+```
 
 ## Question and Answer
 
