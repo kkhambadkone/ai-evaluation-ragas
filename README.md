@@ -22,6 +22,31 @@ The script parsepdfembedtochromadb.py chunks the document KSM-01-26.pdf, creates
 2. Then run queryevalutateragas.py to do the evaluation with RAGAS. 
    The output is the image shown under the Result section below.
 
+## Architecture
+
+                         ┌────────────────────┐
+                         │     Evaluation     │
+                         │     Dataset        │
+                         │(Queries + Context) │
+                         └─────────▲──────────┘
+                                   │
+                                   │
+       ┌───────────────────────────┼───────────────────────────┐
+       ▼                           ▼                           ▼
+┌──────────────┐       ┌──────────────────┐        ┌───────────────────┐
+│   RAG System │       │  RAG Evaluation  │        │  Metrics Output   │
+│ (Retrieval + │       │    Engine (RAGAS)│        │ (JSON / Dataframe)│
+│  LLM Answer) │       └───────┬──────────┘        └─────────┬─────────┘
+└─────▲────────┘               │                              │
+      │                        │                              │
+      │        ┌───────────────┴────────────────┐             ↓
+      │        ▼                                ▼     Metrics: Faithfulness,
+      │   Retriever (Vector DB search)   LLM Generator     Answer Relevancy,
+      │     (embeddings + similarity)           (LLM)       Context Precision,
+      │                                                        Context Recall
+      │                                                       (from evaluator)
+      └──────────────────────────────────────────────────────────┘
+
 ## Question and Answer
 
 ### Question
